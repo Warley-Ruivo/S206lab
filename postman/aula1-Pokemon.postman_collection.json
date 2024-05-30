@@ -7,28 +7,33 @@
 	},
 	"item": [
 		{
-			"name": "localiza pokemon com sucesso",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "Não localiza pokemon",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "Endpoint falho localiza pokemon",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
+			"name": "GET",
+			"item": [
+				{
+					"name": "localiza pokemon com sucesso",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Não localiza pokemon",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint falho localiza pokemon",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
