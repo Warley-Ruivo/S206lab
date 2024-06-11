@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "cypress": "^13.10.0",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "glob": "^10.4.1",

@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "2fe1f57d-10d1-4b22-bc2a-435833e5ee90",
+		"name": "PV2-Warley",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35372381"
+	},
+	"item": [
+		{
+			"name": "Cenário-1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cenário-2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"allasani.pedadredana12@15ce.com\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Arneeresh Chatto\",\r\n    \"email\": \"allasani.pedadredana12@15ce.com\",\r\n    \"gender\": \"female\",\r\n    \"status\": \"inactive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users?access-token=934391e1941ec154e353c21aa0d26adf88af0ef3ede36be890adc5529617f856",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "934391e1941ec154e353c21aa0d26adf88af0ef3ede36be890adc5529617f856",
+							"description": "token"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cenário-3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Alanni Pedirys\",\r\n    \"email\":\"alasanni.pdredana12@15ce.com\", \r\n    \"gender\": \"female\",\r\n    \"status\":\"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users/6957912?access-token=934391e1941ec154e353c21aa0d26adf88af0ef3ede36be890adc5529617f856",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"6957912"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "934391e1941ec154e353c21aa0d26adf88af0ef3ede36be890adc5529617f856",
+							"description": "token"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cenário-4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Resource not found\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users/6957906?access-token=934391e1941ec154e353c21aa0d26adf88af0ef3ede36be890adc5529617f856",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"6957906"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "934391e1941ec154e353c21aa0d26adf88af0ef3ede36be890adc5529617f856",
+							"description": "token "
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
