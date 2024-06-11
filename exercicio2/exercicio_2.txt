@@ -1,0 +1,11 @@
+
+1 - 8
+2 - automatizados
+3 - no topo da pirmamide
+4 - funcionais
+5 - nesse exercicio não
+6 - Tem que automatizar ,cobertura de testes, relatorio e manitoramento e teste de API
+
+
+
+
